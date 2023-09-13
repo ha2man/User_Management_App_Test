@@ -1,0 +1,11 @@
+.textFieldRoot {
+  background-color: transparent;
+  &:focus {
+    @apply tw-border-2 tw-border-greenDark;
+  }
+
+  @apply tw-appearance-none -tw-outline-offset-1 tw-border tw-border-greyWhite tw-duration-100 tw-rounded-md tw-w-full tw-px-2 tw-py-2 tw-min-h-[45px] tw-mb-3 tw-text-white
+}
+
+.dayMode { @apply tw-text-black tw-border-greyNormalDay }
+.nightMode { @apply tw-text-white tw-border-greyWhite }

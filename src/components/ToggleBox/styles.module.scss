@@ -1,0 +1,37 @@
+.toggleboxRoot {
+    input {
+        &:checked{
+            ~ .toggleMark:after {
+                @apply tw-left-6
+            }
+        }
+        @apply tw-cursor-pointer tw-appearance-none tw-w-11 tw-bg-greenDark tw-rounded-2xl tw-mr-2 tw-border tw-border-greenDark
+    }
+
+    &.disabled {
+        @apply tw-text-greyWhite
+    }
+
+    @apply tw-relative tw-flex tw-p-1 tw-mt-3 tw-mb-3 tw-text-white tw-select-none
+}
+
+.toggleMark {
+    &:after {
+        content: "";
+        @apply tw-absolute tw-left-1 tw-top-1 tw-w-4 tw-h-4 tw-rounded-[50%] tw-duration-150 tw-cursor-pointer
+    }
+    @apply tw-absolute tw-top-1 tw-left-1 tw-h-6 tw-w-6
+}
+
+.dayMode {
+    .toggleMark:after {
+        @apply tw-bg-white
+    }
+    @apply tw-text-black
+}
+.nightMode {
+    .toggleMark:after {
+        @apply tw-bg-greyDark
+    }
+    @apply tw-text-white
+}

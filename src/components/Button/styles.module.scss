@@ -1,0 +1,15 @@
+.buttonRoot {
+  @apply
+  tw-py-2
+  tw-px-2
+  tw-rounded-md
+  tw-flex
+  tw-items-center
+  tw-justify-center
+  tw-cursor-pointer
+  tw-duration-100
+  tw-select-none;
+}
+
+.nightMode { @apply tw-bg-greyLight tw-text-white hover:tw-bg-greyWhite}
+.dayMode { @apply tw-bg-greyDay tw-text-black hover:tw-bg-greyNormalDay}

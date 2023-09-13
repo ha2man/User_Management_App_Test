@@ -1,0 +1,34 @@
+.selectFieldRoot {
+  background-color: transparent;
+  &:focus {
+    @apply tw-border-2 tw-border-greenDark;
+  }
+
+  &::-webkit-inner-spin-button, &::-webkit-outer-spin-button {
+    @apply tw-appearance-none
+  }
+  @apply tw-appearance-none -tw-outline-offset-1 tw-border tw-border-greyWhite tw-rounded-l-md tw-w-full tw-px-2 tw-py-1 tw-min-h-[45px] tw-text-white
+}
+.selectSpinRoot {
+  > div {
+    &:after {
+      content: "";
+      @apply tw-absolute tw-w-[11px] tw-h-[11px] tw-top-[12px] tw-left-2 tw-border-white tw-border-l tw-border-b -tw-rotate-45
+    }
+    @apply tw-rounded-r-md tw-relative tw-w-[30px] tw-h-full tw-bg-greyLight tw-border tw-border-greyWhite hover:tw-bg-greyWhite
+  }
+  @apply tw-w-[30px] tw-flex
+}
+
+.dayMode {
+  .selectSpinRoot > div {
+    &:after {
+      @apply tw-border-greyDark
+    }
+    @apply tw-bg-greyDay tw-border-greyDay hover:tw-bg-greyWhite
+  }
+  select { @apply tw-text-black tw-border-greyNormalDay }
+}
+.nightMode {
+  select { @apply tw-text-white tw-bg-greyDark }
+}

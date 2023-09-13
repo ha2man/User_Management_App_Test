@@ -1,0 +1,74 @@
+.homeRoot {
+    @apply tw-bg-greyDark tw-w-full tw-h-screen
+}
+
+.homeContainer {
+    @apply tw-container tw-p-5 tw-h-screen md:tw-flex tw-m-auto tw-bg-greyDark tw-border-x
+}
+
+.formRoot {
+    &::before {
+        content: 'Insert Row';
+        @apply tw-absolute -tw-top-3.5 tw-left-3 tw-font-light
+    }
+    @apply tw-relative md:tw-m-5 tw-m-0 tw-mb-5 tw-p-3 tw-py-5 tw-min-w-[300px] tw-border tw-rounded-md
+}
+
+.tableRoot {
+    @apply tw-px-1 tw-border md:tw-m-5 tw-m-0 tw-w-full tw-rounded-md tw-overflow-y-auto
+}
+
+.tableContainer {
+    > tr, th {
+        @apply tw-font-light sm:tw-p-1 tw-p-0
+    }
+    > tr, td {
+        @apply tw-font-light sm:tw-p-2 tw-p-1
+    }
+    thead {
+        tr {
+            @apply tw-w-full
+        }
+        @apply tw-h-[40px] tw-sticky tw-top-0
+    }
+    @apply tw-w-full tw-text-white tw-relative
+}
+
+.tableHeader {
+    @apply tw-bg-greyLight tw-select-none 
+}
+
+.tableRow {
+    @apply tw-cursor-pointer tw-duration-75 hover:tw-bg-greenNormal hover:tw-text-white active:tw-bg-greenDark tw-select-none
+}
+
+.selectedRow {
+    @apply tw-bg-greenDark tw-text-white
+}
+
+.dividerRoot {
+    @apply tw-border-t tw-border-greyWhite tw-m-4
+}
+
+.nightMode {
+    > * {
+        @apply tw-text-white
+    }
+    &.formRoot::before {
+        @apply tw-text-white tw-bg-greyDark
+    }
+    @apply tw-bg-greyDark tw-border-greyWhite
+}
+
+.dayMode {
+    .tableHeader {
+        @apply tw-bg-greyDay
+    }
+    > * {
+        @apply tw-text-black
+    }
+    &.formRoot::before {
+        @apply tw-text-black tw-bg-white
+    }
+    @apply tw-bg-white tw-border-greyNormalDay
+}
